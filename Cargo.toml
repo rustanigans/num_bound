@@ -1,0 +1,13 @@
+[package]
+name = "num_bound"
+version = "0.1.0"
+edition = "2021"
+authors = ["Steven T <12050358+Sibz@users.noreply.github.com>"]
+description = "Add bounds fn to anything implementing `Ord` that bounds a number to a range"
+documentation = "https://docs.rs/num_bound"
+homepage = "https://github.com/rustanigans/num_bound"
+repository = "https://github.com/rustanigans/num_bound"
+license-file = "LICENSE"
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
