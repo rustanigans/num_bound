@@ -1,8 +1,8 @@
 # num_bound
 
-Trait that adds a bound function.
+Trait that adds a bound function enabling to restrict a number to a range.
 
-Automatically implemented for anything that is `Ord`
+Automatically implemented for anything that implements std trait `Ord`.
 
 ## Usage
 `bound(&self, lower: &Self, upper: &Self) -> &Self`
@@ -10,11 +10,19 @@ Automatically implemented for anything that is `Ord`
 
 use num_bound::Bound;
 
-let upper = 500;
-let lower = 200;
+#[test]
+fn bound_test()
+{
+    let lower = 200;
+    let upper = 500;
 
-assert_eq!(300.bound(&lower, &upper), &300);
-assert_eq!(550.bound(&lower, &upper), &500);
-assert_eq!(100.bound(&lower, &upper), &200);
+    let out_lower = 100;
+    let out_upper = 600;
+    let in_bounds = 300;
+    
+    assert_eq!(out_lower.bound(&l, &u), &lower);
+    assert_eq!(out_upper.bound(&l, &u), &upper);
+    assert_eq!(in_bounds.bound(&l, &u), &in_bounds);
+}
 
 ```
