@@ -1,6 +1,6 @@
 [package]
 name = "num_bound"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 authors = ["Steven T <12050358+Sibz@users.noreply.github.com>"]
 description = "Add bounds fn to anything implementing `Ord` that bounds a number to a range"
